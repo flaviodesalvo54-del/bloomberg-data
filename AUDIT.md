@@ -1,33 +1,32 @@
-# Audit — 2026-09-14 (eseguito 2026-09-15 20:39)
-I cinque: NUTX · APPS · APP · CVNA · DAVE. Esito: 18 PASS, 2 WARN, 1 FAIL.
+# Audit — 2026-09-15 (run 2026-09-15 21:13)
+The five: NUTX · APPS · APP · CVNA · DAVE. Result: 19 PASS, 1 WARN, 0 FAIL.
 
-## Freschezza
-- **FAIL** `A1-S&P 1500` ultimo prezzo S&P 1500 — 2026-09-04, 6 sedute fa
-- **PASS** `A1-small cap` ultimo prezzo small cap — 2026-09-11, 1 sedute fa
-- **PASS** `A1-ACWI` ultimo prezzo ACWI — 2026-09-11, 1 sedute fa
-- **PASS** `A2` calendari utili (ultimo aggiornamento file) — 2026-09-14, 0 giorni fa
-- **PASS** `A3` bundle della pagina — generato 2026-09-14, 0 giorni fa
+## Freshness
+- **PASS** `A1-S&P 1500` last price, S&P 1500 — 2026-09-15, 0 sessions ago
+- **PASS** `A1-small cap` last price, small cap — 2026-09-15, 0 sessions ago
+- **PASS** `A1-ACWI` last price, ACWI — 2026-09-15, 0 sessions ago
+- **PASS** `A2` earnings calendars (file refresh) — 2026-09-15, 0 days ago
+- **PASS** `A3` page bundle — generated 2026-09-15, 0 days ago
 
-## Prezzi
-- **PASS** `B1` buchi nelle ultime 252 sedute (cinque + primi 40) — 43 nomi; con piu' di 5 giorni mancanti: nessuno
-- **PASS** `B2` salti giornalieri oltre il 60% fra gli ammessi — nessuno (filtro |mossa| <= 60%)
-- **PASS** `B3` seconda fonte prezzi (storico Nasdaq): max |differenza rendimento giornaliero| ultime 20 sedute — max 0.0000 su 9 nomi; non verificabili: nessuno
+## Prices
+- **PASS** `B1` gaps in the last 252 sessions (the five + top 40) — 43 names; more than 5 missing days: none
+- **PASS** `B2` daily moves above 60% among admitted names — none (filter |move| <= 60%)
+- **PASS** `B3` second price source (Nasdaq historical): max |daily-return difference| over the last 20 sessions — max 0.0004 across 9 names; not verifiable: none
 
-## Calendari
-- **PASS** `C1` prossima data nei file = prossima data usata dal motore (ammessi) — 1528 nomi; incoerenti: nessuno
-- **WARN** `C2` seconda fonte date (calendario Nasdaq) — nomi ammessi — 1020 uguali, 51 assenti su Nasdaq, 457 diverse su 1528; i cinque: {'NUTX': 'assente su Nasdaq', 'APPS': 'uguale', 'APP': 'uguale', 'CVNA': 'diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)', 'DAVE': 'diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)'}; le date diverse restano dentro la finestra: da confermare sul terminale
-- **PASS** `C3` date storiche Yahoo vs 8-K item 2.02 su EDGAR (ultime 12, tolleranza ±1 giorno) — i cinque — copertura per nome: {'NUTX': '12/12', 'APPS': '12/12', 'APP': '12/12', 'CVNA': '12/12', 'DAVE': '12/12'}
+## Calendars
+- **PASS** `C1` next date in the files = next date used by the engine (admitted names) — 1529 names; inconsistent: none
+- **WARN** `C2` second calendar source (Nasdaq earnings calendar), admitted names — 1020 same, 52 not on Nasdaq, 457 differ out of 1529; the five: {'NUTX': 'not on Nasdaq', 'APPS': 'same', 'APP': 'same', 'CVNA': 'differs (2026-10-28 Yahoo vs 2026-11-04 Nasdaq)', 'DAVE': 'differs (2026-11-04 Yahoo vs 2026-11-03 Nasdaq)'}; the differing dates stay inside the window: confirm on the terminal
+- **PASS** `C3` historical Yahoo dates vs SEC EDGAR 8-K item 2.02 filings (last 12, ±1 day), the five — matched per name: {'NUTX': '12/12', 'APPS': '12/12', 'APP': '12/12', 'CVNA': '12/12', 'DAVE': '12/12'}
 
-## Ricalcolo
-- **PASS** `D1` beta, s_ord, s_ann, sigma finestra ricalcolati da zero per 43 nomi vs motore — max differenza relativa 0.000% (LUNR/s_ann 0.00%, RGTI/beta 0.00%, KEEL/s_ann 0.00%, EOSE/beta 0.00%, RGTI/s_ann 0.00%)
-- **PASS** `D2` correlazioni residue dei cinque, indipendenti vs motore — max |differenza| 0.0000; corr max fuori diagonale 0.294
-- **PASS** `D3` sigma del libro e P(1°) dei cinque, ricalcolati vs report — sigma 13.51% (report 13.51%), mu +0.75%, P(1°) 15.43% (report 15.43%)
-- **PASS** `D4` vincoli del report sui cinque (beta<=2, corr<=0.35, dentro, n>=13, ADV>=10M, cap>=1.2B, |mossa|<=60%) — tutti rispettati — beta medio 1.81, corr max 0.29
-- **PASS** `D5` il giorno di reazione porta varianza (|residuo| reazione / mediana ordinaria, ultime 252) — {'NUTX': 5.5, 'APPS': 9.2, 'APP': 5.7, 'CVNA': 4.1, 'DAVE': 3.7}
+## Recomputation
+- **PASS** `D1` β, σ ordinary, σ announcement, σ window recomputed from the raw files for 43 names vs the engine — max relative difference 0.000% (GLUE/beta 0.00%, GLUE/s_ann 0.00%, WGS/beta 0.00%, TE/beta 0.00%, IOVA/beta 0.00%)
+- **PASS** `D2` residual correlations of the five, independent vs the engine — max |difference| 0.0000; max off-diagonal correlation 0.301
+- **PASS** `D3` book σ and P(1st) of the five, recomputed vs the report — σ 13.53% (report 13.53%), drift +0.76%, P(1st) 15.47% (report 15.47%)
+- **PASS** `D4` the report's constraints on the five (β<=2, corr<=0.35, inside, n>=13, ADV>=10M, cap>=1.2B, |move|<=60%) — all satisfied; mean β 1.77, max corr 0.30
+- **PASS** `D5` the reaction day carries variance (|residual| on reaction days ÷ ordinary median, last 252) — {'NUTX': 5.9, 'APPS': 9.6, 'APP': 5.7, 'CVNA': 4.1, 'DAVE': 3.6}
 
 ## Bundle
-- **PASS** `E1` candidati: numerici presenti per gli ammessi, tutti i preset nel bundle — 2432 candidati, 1528 ammessi; nulli: nessuno
-- **PASS** `E2` residui nel bundle (1000 nomi × 252 sedute): correlazioni dei cinque ricalcolate dal bundle = motore — max |differenza| 0.0001
-- **PASS** `E3` quantili del campo monotoni; barra (mediana del massimo) fra 12% e 18% — mediana 14.4%, 400 quantili
-- **PASS** `E4` sigma dei cinque nel bundle = motore — coerenti
-- **WARN** `E5` dati incorporati in index.html = dati.json — diversi: ricostruire la pagina
+- **PASS** `E1` candidates: numeric fields present for admitted names, every preset in the bundle — 2434 names, 1529 admitted; nulls: none
+- **PASS** `E2` residuals in the bundle (1000 names × 252 sessions): correlations of the five recomputed from the bundle = engine — max |difference| 0.0001
+- **PASS** `E3` field quantiles monotone; bar (median of the rivals' maximum) between 12% and 18% — median 14.4%, 400 quantiles
+- **PASS** `E4` σ of the five in the bundle = engine — consistent
