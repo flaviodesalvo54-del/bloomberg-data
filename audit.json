@@ -1,0 +1,950 @@
+{
+ "generated": "2026-09-14",
+ "eseguito": "2026-09-15 20:39",
+ "cinque": [
+  "NUTX",
+  "APPS",
+  "APP",
+  "CVNA",
+  "DAVE"
+ ],
+ "riassunto": {
+  "PASS": 19,
+  "WARN": 1,
+  "FAIL": 1
+ },
+ "ultimi_prezzi": {
+  "S&P 1500": "2026-09-04",
+  "small cap": "2026-09-11",
+  "ACWI": "2026-09-11"
+ },
+ "checks": [
+  {
+   "id": "A1-S&P 1500",
+   "sezione": "freschezza",
+   "nome": "ultimo prezzo S&P 1500",
+   "stato": "FAIL",
+   "dettaglio": "2026-09-04, 6 sedute fa",
+   "dati": null
+  },
+  {
+   "id": "A1-small cap",
+   "sezione": "freschezza",
+   "nome": "ultimo prezzo small cap",
+   "stato": "PASS",
+   "dettaglio": "2026-09-11, 1 sedute fa",
+   "dati": null
+  },
+  {
+   "id": "A1-ACWI",
+   "sezione": "freschezza",
+   "nome": "ultimo prezzo ACWI",
+   "stato": "PASS",
+   "dettaglio": "2026-09-11, 1 sedute fa",
+   "dati": null
+  },
+  {
+   "id": "A2",
+   "sezione": "freschezza",
+   "nome": "calendari utili (ultimo aggiornamento file)",
+   "stato": "PASS",
+   "dettaglio": "2026-09-14, 0 giorni fa",
+   "dati": null
+  },
+  {
+   "id": "A3",
+   "sezione": "freschezza",
+   "nome": "bundle della pagina",
+   "stato": "PASS",
+   "dettaglio": "generato 2026-09-14, 0 giorni fa",
+   "dati": null
+  },
+  {
+   "id": "B1",
+   "sezione": "prezzi",
+   "nome": "buchi nelle ultime 252 sedute (cinque + primi 40)",
+   "stato": "PASS",
+   "dettaglio": "43 nomi; con piu' di 5 giorni mancanti: nessuno",
+   "dati": null
+  },
+  {
+   "id": "B2",
+   "sezione": "prezzi",
+   "nome": "salti giornalieri oltre il 60% fra gli ammessi",
+   "stato": "PASS",
+   "dettaglio": "nessuno (filtro |mossa| <= 60%)",
+   "dati": null
+  },
+  {
+   "id": "B3",
+   "sezione": "prezzi",
+   "nome": "seconda fonte prezzi (storico Nasdaq): max |differenza rendimento giornaliero| ultime 20 sedute",
+   "stato": "PASS",
+   "dettaglio": "max 0.0000 su 9 nomi; non verificabili: nessuno",
+   "dati": {
+    "diff": {
+     "NUTX": 0.0,
+     "APPS": 0.0,
+     "APP": 0.0,
+     "CVNA": 0.0,
+     "DAVE": 0.0,
+     "AXTI": 0.0,
+     "POET": 0.0,
+     "TE": 0.0,
+     "BFLY": 0.0
+    },
+    "chiusure": {
+     "NUTX": [
+      217.02,
+      193.2400054931641,
+      "2026-09-14"
+     ],
+     "APPS": [
+      11.725,
+      10.710000038146973,
+      "2026-09-14"
+     ],
+     "APP": [
+      334.24,
+      320.55999755859375,
+      "2026-09-14"
+     ],
+     "CVNA": [
+      70.87,
+      74.58999633789062,
+      "2026-09-14"
+     ],
+     "DAVE": [
+      365.78,
+      380.69000244140625,
+      "2026-09-14"
+     ],
+     "AXTI": [
+      57.06,
+      61.63999938964844,
+      "2026-09-14"
+     ],
+     "POET": [
+      7.43,
+      7.920000076293945,
+      "2026-09-14"
+     ],
+     "TE": [
+      4.37,
+      4.599999904632568,
+      "2026-09-14"
+     ],
+     "BFLY": [
+      7.41,
+      7.360000133514404,
+      "2026-09-14"
+     ]
+    }
+   }
+  },
+  {
+   "id": "C1",
+   "sezione": "calendari",
+   "nome": "prossima data nei file = prossima data usata dal motore (ammessi)",
+   "stato": "PASS",
+   "dettaglio": "1528 nomi; incoerenti: nessuno",
+   "dati": null
+  },
+  {
+   "id": "C2",
+   "sezione": "calendari",
+   "nome": "seconda fonte date (calendario Nasdaq) — nomi ammessi",
+   "stato": "WARN",
+   "dettaglio": "1020 uguali, 51 assenti su Nasdaq, 457 diverse su 1528; i cinque: {'NUTX': 'assente su Nasdaq', 'APPS': 'uguale', 'APP': 'uguale', 'CVNA': 'diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)', 'DAVE': 'diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)'}; le date diverse restano dentro la finestra: da confermare sul terminale",
+   "dati": {
+    "diverse": {
+     "NVR": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "NOG": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "CHCO": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "AM": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "NBIX": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "EVTC": "diversa (2026-11-04 yahoo vs 2026-11-05 nasdaq)",
+     "BA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "FCFS": "diversa (2026-10-22 yahoo vs 2026-10-29 nasdaq)",
+     "EQIX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TER": "diversa (2026-10-21 yahoo vs 2026-10-27 nasdaq)",
+     "BOOT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "FORM": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "QRVO": "diversa (2026-11-09 yahoo vs 2026-10-27 nasdaq)",
+     "TFIN": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "SWKS": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "SPXC": "diversa (2026-10-28 yahoo vs 2026-10-29 nasdaq)",
+     "WWW": "diversa (2026-11-12 yahoo vs 2026-11-04 nasdaq)",
+     "CORT": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "CASH": "diversa (2026-10-21 yahoo vs 2026-10-20 nasdaq)",
+     "LBRT": "diversa (2026-10-14 yahoo vs 2026-10-15 nasdaq)",
+     "NOVT": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "LVS": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "AN": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "FCN": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "STAG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "RGEN": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "MGM": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HUM": "diversa (2026-11-06 yahoo vs 2026-11-04 nasdaq)",
+     "OSK": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "SAH": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "DAR": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "SYY": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "CG": "diversa (2026-10-29 yahoo vs 2026-11-06 nasdaq)",
+     "MSI": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "GGG": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "WAL": "diversa (2026-10-21 yahoo vs 2026-10-20 nasdaq)",
+     "ENSG": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "PSX": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "PPC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BNL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TECH": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "IQV": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "UCB": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "RSI": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "ESS": "diversa (2026-10-27 yahoo vs 2026-11-04 nasdaq)",
+     "PGY": "diversa (2026-11-10 yahoo vs 2026-11-09 nasdaq)",
+     "SUI": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HOG": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "CYTK": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "WTRG": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "SAM": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "DCH": "diversa (2026-11-09 yahoo vs 2026-11-06 nasdaq)",
+     "TFX": "diversa (2026-10-29 yahoo vs 2026-11-05 nasdaq)",
+     "DMC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "KVUE": "diversa (2026-11-05 yahoo vs 2026-11-02 nasdaq)",
+     "CB": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "HCSG": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "GNRC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "NE": "diversa (2026-10-27 yahoo vs 2026-10-26 nasdaq)",
+     "NOW": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "GPK": "diversa (2026-11-09 yahoo vs 2026-11-03 nasdaq)",
+     "EPAC": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "VSEC": "diversa (2026-11-02 yahoo vs 2026-10-26 nasdaq)",
+     "UNF": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "REG": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "CTRE": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "ZBRA": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "NLY": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "FMC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MET": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "LQDA": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "FTV": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "STAA": "diversa (2026-11-11 yahoo vs 2026-11-04 nasdaq)",
+     "TCBI": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "TDS": "diversa (2026-11-09 yahoo vs 2026-11-06 nasdaq)",
+     "BXMT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MEDP": "diversa (2026-10-19 yahoo vs 2026-10-28 nasdaq)",
+     "THG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HXL": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "GRBK": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "SONO": "diversa (2026-11-11 yahoo vs 2026-11-04 nasdaq)",
+     "RRX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "NWE": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "KHC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "ABBV": "diversa (2026-10-29 yahoo vs 2026-10-30 nasdaq)",
+     "ETR": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "MZTI": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "SBUX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "PG": "diversa (2026-10-22 yahoo vs 2026-10-23 nasdaq)",
+     "SFM": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CAT": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "AVTR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "ODFL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MCD": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "PSKY": "diversa (2026-11-09 yahoo vs 2026-11-03 nasdaq)",
+     "GEHC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "EG": "diversa (2026-10-28 yahoo vs 2026-10-26 nasdaq)",
+     "VAL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "PTCT": "diversa (2026-11-05 yahoo vs 2026-11-03 nasdaq)",
+     "FBRT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "RNG": "diversa (2026-11-05 yahoo vs 2026-11-02 nasdaq)",
+     "HLIT": "diversa (2026-10-26 yahoo vs 2026-11-02 nasdaq)",
+     "BKU": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "RNR": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "EXR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "DV": "diversa (2026-11-05 yahoo vs 2026-11-06 nasdaq)",
+     "TXN": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "VRSK": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MTX": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "REXR": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "TMO": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CCI": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CBZ": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HSY": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "HAYW": "diversa (2026-10-27 yahoo vs 2026-11-04 nasdaq)",
+     "ES": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "GL": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "ONB": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "INVH": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CVI": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "IP": "diversa (2026-10-28 yahoo vs 2026-10-29 nasdaq)",
+     "PCAR": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "WDC": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "WGO": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CATY": "diversa (2026-10-21 yahoo vs 2026-10-20 nasdaq)",
+     "KBR": "diversa (2026-10-22 yahoo vs 2026-10-29 nasdaq)",
+     "KAI": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "ALKS": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "ELV": "diversa (2026-10-21 yahoo vs 2026-10-20 nasdaq)",
+     "MSFT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BIO": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "ALGT": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "FBIN": "diversa (2026-11-12 yahoo vs 2026-10-29 nasdaq)",
+     "UDR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MATX": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "ITGR": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "CWEN": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "AMR": "diversa (2026-11-06 yahoo vs 2026-11-05 nasdaq)",
+     "OLN": "diversa (2026-10-29 yahoo vs 2026-10-26 nasdaq)",
+     "AWK": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CELH": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "CWST": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "CAR": "diversa (2026-10-27 yahoo vs 2026-10-26 nasdaq)",
+     "OVV": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "REZI": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "AVY": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "LFUS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "AAP": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "FHN": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "ESAB": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "NIC": "diversa (2026-10-20 yahoo vs 2026-10-22 nasdaq)",
+     "KLAC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "DFIN": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "NDAQ": "diversa (2026-10-22 yahoo vs 2026-10-20 nasdaq)",
+     "URI": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "WHR": "diversa (2026-10-28 yahoo vs 2026-10-26 nasdaq)",
+     "NXPI": "diversa (2026-10-26 yahoo vs 2026-10-27 nasdaq)",
+     "EAT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "ELS": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "WSO": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "PINS": "diversa (2026-11-09 yahoo vs 2026-11-03 nasdaq)",
+     "ROG": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "CHRW": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CAVA": "diversa (2026-11-10 yahoo vs 2026-11-03 nasdaq)",
+     "ENTG": "diversa (2026-11-04 yahoo vs 2026-10-29 nasdaq)",
+     "CALX": "diversa (2026-10-26 yahoo vs 2026-11-04 nasdaq)",
+     "GBX": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "COCO": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "EPRT": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "TYL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HIG": "diversa (2026-10-29 yahoo vs 2026-10-26 nasdaq)",
+     "CNH": "diversa (2026-11-09 yahoo vs 2026-11-06 nasdaq)",
+     "ZBH": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "SKY": "diversa (2026-10-27 yahoo vs 2026-11-03 nasdaq)",
+     "VLY": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "HE": "diversa (2026-11-13 yahoo vs 2026-11-06 nasdaq)",
+     "HWKN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "PNW": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "SEIC": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "LEA": "diversa (2026-10-22 yahoo vs 2026-10-30 nasdaq)",
+     "SIRI": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "PTC": "diversa (2026-11-11 yahoo vs 2026-11-04 nasdaq)",
+     "ENOV": "diversa (2026-11-04 yahoo vs 2026-11-05 nasdaq)",
+     "GTY": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PNFP": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "UCTT": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "GNW": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "SPHR": "diversa (2026-11-05 yahoo vs 2026-11-03 nasdaq)",
+     "AVNT": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "XYZ": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "VTR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "SHO": "diversa (2026-11-05 yahoo vs 2026-11-06 nasdaq)",
+     "MAS": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "AMCR": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "XYL": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "KTB": "diversa (2026-10-29 yahoo vs 2026-11-02 nasdaq)",
+     "SIGI": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "EVR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "DAVE": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "KMB": "diversa (2026-11-03 yahoo vs 2026-10-29 nasdaq)",
+     "GTES": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HIMS": "diversa (2026-11-09 yahoo vs 2026-11-02 nasdaq)",
+     "CVBF": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CHEF": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BRKR": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "WEX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "HOMB": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "EL": "diversa (2026-11-02 yahoo vs 2026-10-29 nasdaq)",
+     "GD": "diversa (2026-10-28 yahoo vs 2026-10-23 nasdaq)",
+     "AVT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "AXTA": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "PM": "diversa (2026-10-21 yahoo vs 2026-10-20 nasdaq)",
+     "MCO": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CLX": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "CAH": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "EXEL": "diversa (2026-10-27 yahoo vs 2026-11-03 nasdaq)",
+     "RS": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CGNX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "ACT": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "MTG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "AMH": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "SRPT": "diversa (2026-11-04 yahoo vs 2026-11-02 nasdaq)",
+     "ITT": "diversa (2026-10-27 yahoo vs 2026-11-04 nasdaq)",
+     "ALGN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "FLEX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "KNX": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "WSC": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "GWW": "diversa (2026-11-04 yahoo vs 2026-10-30 nasdaq)",
+     "TREX": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "TRGP": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "FIVN": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "EEFT": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "MANH": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "UFPI": "diversa (2026-10-26 yahoo vs 2026-11-04 nasdaq)",
+     "FIBK": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CVS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "WDFC": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "FE": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "ABT": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "TMDX": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "JBHT": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "CCS": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "TSLA": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PI": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "UNIT": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "MAT": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "POWI": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "SSB": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PBI": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "NVST": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CVNA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "ALSN": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "VSAT": "diversa (2026-11-05 yahoo vs 2026-11-06 nasdaq)",
+     "ROL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "GOOGL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CACI": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PAG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "META": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MYRG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MAA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TNL": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CBU": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "SF": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "GT": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "HL": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "MKTX": "diversa (2026-11-05 yahoo vs 2026-11-06 nasdaq)",
+     "NSP": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "COTY": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "GOOG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TILE": "diversa (2026-11-06 yahoo vs 2026-10-30 nasdaq)",
+     "GHC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "OGE": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "WSBC": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CRI": "diversa (2026-11-02 yahoo vs 2026-10-26 nasdaq)",
+     "REGN": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "EXTR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "FTRE": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "VFC": "diversa (2026-10-26 yahoo vs 2026-10-27 nasdaq)",
+     "VZ": "diversa (2026-10-20 yahoo vs 2026-11-04 nasdaq)",
+     "DAN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "OSW": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CDE": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TEL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "WH": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "NBHC": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "ADP": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "AR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "STC": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CSL": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "STT": "diversa (2026-10-14 yahoo vs 2026-10-16 nasdaq)",
+     "GSHD": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PFS": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "IRT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "SLGN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "LAD": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PLUS": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "QCOM": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "PII": "diversa (2026-10-26 yahoo vs 2026-10-27 nasdaq)",
+     "BLKB": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "LUV": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "SYF": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "FCPT": "diversa (2026-10-28 yahoo vs 2026-10-27 nasdaq)",
+     "TKR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "OSCR": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "BANC": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "HWM": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "MHK": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "SCI": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "IBKR": "diversa (2026-10-20 yahoo vs 2026-10-15 nasdaq)",
+     "AFL": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "VRTS": "diversa (2026-10-30 yahoo vs 2026-10-23 nasdaq)",
+     "CSX": "diversa (2026-10-22 yahoo vs 2026-10-15 nasdaq)",
+     "NI": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MTRN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "NCLH": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "RDNT": "diversa (2026-11-05 yahoo vs 2026-11-09 nasdaq)",
+     "CSTM": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "EPR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "MARA": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "EHC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BMI": "diversa (2026-10-21 yahoo vs 2026-10-20 nasdaq)",
+     "PRU": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "WTS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "KEX": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "FISV": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "NWN": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "RUSHA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "UTHR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "DVA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "AIG": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "OI": "diversa (2026-10-27 yahoo vs 2026-11-03 nasdaq)",
+     "PTEN": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "OFG": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "VIAV": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TTWO": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "AES": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "SLB": "diversa (2026-10-23 yahoo vs 2026-10-16 nasdaq)",
+     "SON": "diversa (2026-10-29 yahoo vs 2026-10-28 nasdaq)",
+     "KALU": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "OTIS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "CEG": "diversa (2026-11-09 yahoo vs 2026-11-06 nasdaq)",
+     "TDY": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "INDB": "diversa (2026-10-22 yahoo vs 2026-10-15 nasdaq)",
+     "FUN": "diversa (2026-11-04 yahoo vs 2026-11-06 nasdaq)",
+     "GRMN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "OII": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "FND": "diversa (2026-10-28 yahoo vs 2026-10-29 nasdaq)",
+     "GKOS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "LITE": "diversa (2026-11-05 yahoo vs 2026-11-03 nasdaq)",
+     "BBT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "KKR": "diversa (2026-11-05 yahoo vs 2026-11-06 nasdaq)",
+     "UNM": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "QDEL": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "PSA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "RHI": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "FBNC": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PKG": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "COHU": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "PRDO": "diversa (2026-11-09 yahoo vs 2026-11-03 nasdaq)",
+     "WAB": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "CTSH": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TRV": "diversa (2026-10-15 yahoo vs 2026-10-16 nasdaq)",
+     "HNI": "diversa (2026-11-04 yahoo vs 2026-10-27 nasdaq)",
+     "AA": "diversa (2026-10-15 yahoo vs 2026-10-28 nasdaq)",
+     "AEP": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "ADT": "diversa (2026-11-05 yahoo vs 2026-11-03 nasdaq)",
+     "CI": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "VRT": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "BANR": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "ORA": "diversa (2026-11-04 yahoo vs 2026-11-02 nasdaq)",
+     "INDV": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "CNXN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "AOSL": "diversa (2026-11-09 yahoo vs 2026-11-04 nasdaq)",
+     "UE": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BL": "diversa (2026-11-03 yahoo vs 2026-11-05 nasdaq)",
+     "MC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "PGR": "diversa (2026-10-14 yahoo vs 2026-10-21 nasdaq)",
+     "WAT": "diversa (2026-10-30 yahoo vs 2026-11-03 nasdaq)",
+     "IEX": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "LRCX": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "BLK": "diversa (2026-10-14 yahoo vs 2026-10-13 nasdaq)",
+     "ROKU": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "MTDR": "diversa (2026-10-27 yahoo vs 2026-10-20 nasdaq)",
+     "NXT": "diversa (2026-10-28 yahoo vs 2026-10-22 nasdaq)",
+     "HAPN": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "MBLY": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "ASR": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "TNGX": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "RIG": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "SITE": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TNET": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "FRSH": "diversa (2026-11-03 yahoo vs 2026-11-04 nasdaq)",
+     "ATRC": "diversa (2026-10-27 yahoo vs 2026-11-04 nasdaq)",
+     "OTEX": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "DNN": "diversa (2026-11-03 yahoo vs 2026-11-05 nasdaq)",
+     "AXGN": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BTE": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "ETON": "diversa (2026-11-12 yahoo vs 2026-11-05 nasdaq)",
+     "TSHA": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "IRTC": "diversa (2026-11-05 yahoo vs 2026-10-29 nasdaq)",
+     "MLYS": "diversa (2026-11-10 yahoo vs 2026-11-09 nasdaq)",
+     "AMC": "diversa (2026-10-20 yahoo vs 2026-11-04 nasdaq)",
+     "IE": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "VERA": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "RYZ": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "SGHC": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "COUR": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "COMP": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "QCRH": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "PAM": "diversa (2026-11-02 yahoo vs 2026-11-03 nasdaq)",
+     "AUPH": "diversa (2026-11-09 yahoo vs 2026-11-03 nasdaq)",
+     "OCUL": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "AXS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "QS": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "ALKT": "diversa (2026-10-28 yahoo vs 2026-10-29 nasdaq)",
+     "SYBT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "TARS": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "HURN": "diversa (2026-11-03 yahoo vs 2026-10-27 nasdaq)",
+     "PAX": "diversa (2026-11-11 yahoo vs 2026-11-03 nasdaq)",
+     "KOS": "diversa (2026-11-09 yahoo vs 2026-11-02 nasdaq)",
+     "DHT": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "BELFB": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "PLSE": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "DRVN": "diversa (2026-10-29 yahoo vs 2026-11-03 nasdaq)",
+     "GPGI": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "EFXT": "diversa (2026-10-29 yahoo vs 2026-11-05 nasdaq)",
+     "BELFA": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "IDYA": "diversa (2026-11-09 yahoo vs 2026-11-03 nasdaq)",
+     "VRDN": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "MEOH": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "RGTI": "diversa (2026-11-10 yahoo vs 2026-11-09 nasdaq)",
+     "BBAI": "diversa (2026-11-02 yahoo vs 2026-11-09 nasdaq)",
+     "FRME": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "BHC": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "GLNG": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "EXK": "diversa (2026-11-05 yahoo vs 2026-11-06 nasdaq)",
+     "CTOS": "diversa (2026-10-27 yahoo vs 2026-10-26 nasdaq)",
+     "HLIO": "diversa (2026-11-05 yahoo vs 2026-11-02 nasdaq)",
+     "SKWD": "diversa (2026-10-29 yahoo vs 2026-11-04 nasdaq)",
+     "NKTR": "diversa (2026-11-12 yahoo vs 2026-11-05 nasdaq)",
+     "CLOV": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "IFS": "diversa (2026-11-09 yahoo vs 2026-11-05 nasdaq)",
+     "ATRO": "diversa (2026-11-05 yahoo vs 2026-11-03 nasdaq)",
+     "TENB": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "NXE": "diversa (2026-11-03 yahoo vs 2026-11-04 nasdaq)",
+     "CMPR": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "DYN": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "STNE": "diversa (2026-11-12 yahoo vs 2026-11-05 nasdaq)",
+     "MIRM": "diversa (2026-11-04 yahoo vs 2026-11-03 nasdaq)",
+     "TOWN": "diversa (2026-10-21 yahoo vs 2026-10-28 nasdaq)",
+     "AGM": "diversa (2026-11-03 yahoo vs 2026-11-02 nasdaq)",
+     "FUBO": "diversa (2026-11-04 yahoo vs 2026-11-02 nasdaq)",
+     "TRMD": "diversa (2026-11-04 yahoo vs 2026-11-05 nasdaq)",
+     "ULCC": "diversa (2026-11-05 yahoo vs 2026-11-04 nasdaq)",
+     "PUMP": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)",
+     "IMAX": "diversa (2026-10-29 yahoo vs 2026-10-22 nasdaq)",
+     "ARIS": "diversa (2026-10-28 yahoo vs 2026-11-04 nasdaq)"
+    },
+    "nasdaq": {
+     "APPS": "2026-11-03",
+     "APP": "2026-11-04",
+     "CVNA": "2026-11-04",
+     "DAVE": "2026-11-03"
+    }
+   }
+  },
+  {
+   "id": "C3",
+   "sezione": "calendari",
+   "nome": "date storiche Yahoo vs 8-K item 2.02 su EDGAR (ultime 12, tolleranza ±1 giorno) — i cinque",
+   "stato": "PASS",
+   "dettaglio": "copertura per nome: {'NUTX': '12/12', 'APPS': '12/12', 'APP': '12/12', 'CVNA': '12/12', 'DAVE': '12/12'}",
+   "dati": {
+    "copertura": {
+     "NUTX": [
+      12,
+      12
+     ],
+     "APPS": [
+      12,
+      12
+     ],
+     "APP": [
+      12,
+      12
+     ],
+     "CVNA": [
+      12,
+      12
+     ],
+     "DAVE": [
+      12,
+      12
+     ]
+    }
+   }
+  },
+  {
+   "id": "D1",
+   "sezione": "ricalcolo",
+   "nome": "beta, s_ord, s_ann, sigma finestra ricalcolati da zero per 43 nomi vs motore",
+   "stato": "PASS",
+   "dettaglio": "max differenza relativa 0.000% (LUNR/s_ann 0.00%, RGTI/beta 0.00%, KEEL/s_ann 0.00%, EOSE/beta 0.00%, RGTI/s_ann 0.00%)",
+   "dati": null
+  },
+  {
+   "id": "D2",
+   "sezione": "ricalcolo",
+   "nome": "correlazioni residue dei cinque, indipendenti vs motore",
+   "stato": "PASS",
+   "dettaglio": "max |differenza| 0.0000; corr max fuori diagonale 0.294",
+   "dati": null
+  },
+  {
+   "id": "D3",
+   "sezione": "ricalcolo",
+   "nome": "sigma del libro e P(1°) dei cinque, ricalcolati vs report",
+   "stato": "PASS",
+   "dettaglio": "sigma 13.51% (report 13.51%), mu +0.75%, P(1°) 15.43% (report 15.43%)",
+   "dati": {
+    "sigma": 0.1351410664068573,
+    "mu": 0.007497912239045734,
+    "p": 0.1542829243976431
+   }
+  },
+  {
+   "id": "D4",
+   "sezione": "ricalcolo",
+   "nome": "vincoli del report sui cinque (beta<=2, corr<=0.35, dentro, n>=13, ADV>=10M, cap>=1.2B, |mossa|<=60%)",
+   "stato": "PASS",
+   "dettaglio": "tutti rispettati — beta medio 1.81, corr max 0.29",
+   "dati": null
+  },
+  {
+   "id": "D5",
+   "sezione": "ricalcolo",
+   "nome": "il giorno di reazione porta varianza (|residuo| reazione / mediana ordinaria, ultime 252)",
+   "stato": "PASS",
+   "dettaglio": "{'NUTX': 5.5, 'APPS': 9.2, 'APP': 5.7, 'CVNA': 4.1, 'DAVE': 3.7}",
+   "dati": null
+  },
+  {
+   "id": "E1",
+   "sezione": "bundle",
+   "nome": "candidati: numerici presenti per gli ammessi, tutti i preset nel bundle",
+   "stato": "PASS",
+   "dettaglio": "2432 candidati, 1528 ammessi; nulli: nessuno",
+   "dati": null
+  },
+  {
+   "id": "E2",
+   "sezione": "bundle",
+   "nome": "residui nel bundle (1000 nomi × 252 sedute): correlazioni dei cinque ricalcolate dal bundle = motore",
+   "stato": "PASS",
+   "dettaglio": "max |differenza| 0.0001",
+   "dati": null
+  },
+  {
+   "id": "E3",
+   "sezione": "bundle",
+   "nome": "quantili del campo monotoni; barra (mediana del massimo) fra 12% e 18%",
+   "stato": "PASS",
+   "dettaglio": "mediana 14.4%, 400 quantili",
+   "dati": null
+  },
+  {
+   "id": "E4",
+   "sezione": "bundle",
+   "nome": "sigma dei cinque nel bundle = motore",
+   "stato": "PASS",
+   "dettaglio": "coerenti",
+   "dati": null
+  },
+  {
+   "id": "E5",
+   "sezione": "bundle",
+   "nome": "dati e audit incorporati in index.html = dati.json e audit.json",
+   "stato": "PASS",
+   "dettaglio": "identici",
+   "dati": null
+  }
+ ],
+ "input_cinque": {
+  "NUTX": {
+   "beta": 1.767,
+   "s_ord": 0.05128,
+   "s_ann": 0.19313,
+   "vol_fin": 0.30418,
+   "n": 15,
+   "ultime_reazioni": [
+    [
+     "2024-11-08",
+     0.0971
+    ],
+    [
+     "2025-04-01",
+     0.512
+    ],
+    [
+     "2025-05-14",
+     0.2594
+    ],
+    [
+     "2025-11-19",
+     0.1285
+    ],
+    [
+     "2025-11-20",
+     0.2955
+    ],
+    [
+     "2026-03-06",
+     -0.1227
+    ],
+    [
+     "2026-05-01",
+     0.1695
+    ],
+    [
+     "2026-08-07",
+     0.0519
+    ]
+   ]
+  },
+  "APPS": {
+   "beta": 1.565,
+   "s_ord": 0.04803,
+   "s_ann": 0.28235,
+   "vol_fin": 0.35799,
+   "n": 28,
+   "ultime_reazioni": [
+    [
+     "2024-11-07",
+     -0.4651
+    ],
+    [
+     "2025-02-06",
+     0.9592
+    ],
+    [
+     "2025-06-17",
+     0.5834
+    ],
+    [
+     "2025-08-06",
+     -0.1569
+    ],
+    [
+     "2025-11-05",
+     0.2241
+    ],
+    [
+     "2026-02-04",
+     -0.0447
+    ],
+    [
+     "2026-05-27",
+     0.3908
+    ],
+    [
+     "2026-08-05",
+     0.3861
+    ]
+   ]
+  },
+  "APP": {
+   "beta": 1.731,
+   "s_ord": 0.04098,
+   "s_ann": 0.19401,
+   "vol_fin": 0.27003,
+   "n": 22,
+   "ultime_reazioni": [
+    [
+     "2024-11-07",
+     0.4432
+    ],
+    [
+     "2025-02-13",
+     0.2201
+    ],
+    [
+     "2025-05-08",
+     0.1131
+    ],
+    [
+     "2025-08-07",
+     0.1156
+    ],
+    [
+     "2025-11-06",
+     0.022
+    ],
+    [
+     "2026-02-12",
+     -0.1727
+    ],
+    [
+     "2026-05-07",
+     0.0804
+    ],
+    [
+     "2026-08-06",
+     -0.1923
+    ]
+   ]
+  },
+  "CVNA": {
+   "beta": 1.988,
+   "s_ord": 0.03314,
+   "s_ann": 0.19716,
+   "vol_fin": 0.24886,
+   "n": 28,
+   "ultime_reazioni": [
+    [
+     "2024-10-31",
+     0.2229
+    ],
+    [
+     "2025-02-20",
+     -0.1183
+    ],
+    [
+     "2025-05-08",
+     0.0952
+    ],
+    [
+     "2025-07-31",
+     0.1795
+    ],
+    [
+     "2025-10-30",
+     -0.1187
+    ],
+    [
+     "2026-02-19",
+     -0.0756
+    ],
+    [
+     "2026-04-30",
+     -0.034
+    ],
+    [
+     "2026-07-30",
+     -0.1152
+    ]
+   ]
+  },
+  "DAVE": {
+   "beta": 2.004,
+   "s_ord": 0.03915,
+   "s_ann": 0.16488,
+   "vol_fin": 0.24368,
+   "n": 17,
+   "ultime_reazioni": [
+    [
+     "2024-11-13",
+     0.444
+    ],
+    [
+     "2025-03-04",
+     -0.0343
+    ],
+    [
+     "2025-05-08",
+     0.4098
+    ],
+    [
+     "2025-08-06",
+     -0.1938
+    ],
+    [
+     "2025-11-04",
+     0.0026
+    ],
+    [
+     "2026-03-03",
+     0.0882
+    ],
+    [
+     "2026-05-06",
+     -0.1062
+    ],
+    [
+     "2026-08-06",
+     -0.1459
+    ]
+   ]
+  }
+ }
+}
